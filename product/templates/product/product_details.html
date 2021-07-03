@@ -1,0 +1,16 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+
+    <h1>{{product.name}}</h1>
+    <p> Цена: <strong> {{product.price}} </strong> </p>
+    <p> Описание: <strong> {{product.description}} </strong> </p>
+    <p> Описание: <strong> {{product.category}} </strong> </p>
+        {% if product.image %}
+    <img src="{{ product.image.url }}" width="100px" height="100px" >
+    {% else %}
+    <p>Фото отсутсвтует!</p>
+    {% endif %}
+
+
+{%endblock %}
